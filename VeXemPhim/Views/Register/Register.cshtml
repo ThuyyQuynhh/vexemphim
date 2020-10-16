@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="/Content/css/layout.css">
+    
+    <link href="~/Content/css/Register.css" rel="stylesheet" />
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/Content/js/JQuery3.3.1.js"></script>
+
+
+</head>
+<body>
+ 
+    <section>
+        <img src="/Content/img/pexels-adrien-olichon-3709369.jpg" class="img-header" alt="">
+        <div class="container">
+            <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+            
+            <div class="form-login">
+                @using (Html.BeginForm("Dangki", "Register"))
+                {
+                    <div>Email</div>
+                    @Html.TextBox("email")
+                    <div>Họ và tên</div>
+                    @Html.TextBox("ten")
+                    <div>Số điện thoại</div>
+                    @Html.TextBox("sdt")
+                    <div>Ngày sinh</div>
+                    @Html.TextBox("ngaySinh")
+                    <div>Mật khẩu</div>
+                    @Html.Password("matKhau")
+                    <div>Nhập lại mật khẩu</div>
+                    @Html.Password("Nhaplaimatkhau")
+                    <input value="Đăng kí" type="submit" id="btnDangky">
+                }
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+    </script>
+</body>
+</html>
+

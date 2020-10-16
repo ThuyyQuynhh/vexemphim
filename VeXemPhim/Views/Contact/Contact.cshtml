@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="/content/css/layout.css">
+    <link rel="stylesheet" href="/content/css/contact.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/content/js/JQuery3.3.1.js"></script>
+
+
+</head>
+<body>
+    
+    <section>
+        <div class="menu_contact">
+            <div class="tab_contact">
+                <img src="/content/img/contact1.jpg">
+                <ul>
+                    <li>
+                        <img src="/content/img/location.jpg">
+                        <h5>Location</h5>
+                        236 Hoàng Quốc Việt, Cổ Nhuế, Từ Liêm, Hà Nội
+                    </li>
+                    <li>
+                        <img src="/content/img/phone.png">
+                        <h5>Phones</h5>
+                        (09)-65501930
+                    </li>
+                    <li>
+                        <img src="/content/img/email.png">
+                        <h5>Email</h5>
+                        ducanh99tpvpnd@gmail.com
+                    </li>
+                    <li>
+                        <img src="/content/img/working.png">
+                        <h5>Working hours</h5>
+                        Wednesday - Sunday<br>
+                        10:00 AM - 10:00 PM
+                    </li>
+                </ul>
+            </div>
+            <div class="map_contact">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6445216117454!2d105.78423511421435!3d21.046904985988537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab326aa9bfef%3A0xd60313e072fc5ac4!2zMjM2IEhvw6BuZyBRdeG7kWMgVmnhu4d0LCBD4buVIE5odeG6vywgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1600360754822!5m2!1svi!2s"
+                        width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+            </div>
+            <div class="message_contact">
+                <h3><b>Send message</h3>
+                <ul>
+                    <li>
+                        <input type="text" name="field-header" value="" size="120" aria-required="true" placeholder="Your name">
+                    </li>
+                    <li>
+                        <input type="text" name="field_header2" value="" size="120" aria-required="true" placeholder="Your email">
+                    </li>
+                    <li>
+                        <textarea name="field_header3" cols="120" rows="5" placeholder="Message"></textarea>
+                    </li>
+                </ul>
+                <a class="button">Submit</a>
+            </div>
+        </div>
+    </section>
+   
+    
+    <script>
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,435 @@
+﻿
+@{
+    ViewBag.Title = "Trangchu";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="/content/css/layout.css">
+    <link rel="stylesheet" href="/content/css/phim.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/content/js/JQuery3.3.1.js"></script>
+
+
+</head>
+<body>
+    
+    <section>
+        <div class="menu_phim">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="/Content/img/slidephim1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="/Content/img/slidephim2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="/Content/img/slidephim3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="/Content/img/slidephim4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="/Content/img/slidephim5.jpg" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="nut-dot">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+            <div class="tab">
+                <ul>
+                    <li class="tab_link" onclick="openTab(event,1)" id="defaultOpen">Phim đang chiếu</li>
+                    <li class="tab_link" onclick="openTab(event,2)">Phim sắp chiếu</li>
+                </ul>
+            </div>
+            <div class="tab_content">
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014868_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Nàng tiên cá ở Paris (2D) - C13</b></h6><br>
+                                <p>Thể loại: Tâm lý, tình cảm<br>Khởi chiếu: 11/09/2020</p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014877_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Ác nữ (2D) - C18</b></h6><br>
+                                <p>
+                                    Thể loại: Kinh dị<br>
+                                    Khởi chiếu: 11/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014851_0.png">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Green land:Thảm họa thiên thạch (2D) - C16</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động<br>
+                                    Khởi chiếu: 10/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014875_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Tâm tư cất lời (2D) - P</b></h6><br>
+                                <p>
+                                    Thể loại: Tâm lý, tình cảm<br>
+                                    Khởi chiếu: 10/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014852_0.png">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Antebellum (2D) - C18</b></h6><br>
+                                <p>
+                                    Thể loại: Kinh dị<br>
+                                    Khởi chiếu: 04/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014866_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Ác quỷ đối đầu (2D) - C18</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động<br>
+                                    Khởi chiếu: 11/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014870_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Đối đầu - C18</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động<br>
+                                    Khởi chiếu: 04/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014850_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Dị nhân thế hệ mới (2D) - C16</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động<br>
+                                    Khởi chiếu: 01/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014847_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Đầu gấu bắc cực: Kì nghỉ vui nhộn (2D-LT)-P </b></h6><br>
+                                <p>
+                                    Thể loại: Hài<br>
+                                    Khởi chiếu: 05/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014849_0.png">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Học viện quái vật: Du học sinh (2D-LT)-P</b></h6><br>
+                                <p>
+                                    Thể loại: Hài<br>
+                                    Khởi chiếu: 06/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014843_0.png">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Tenet (2D) - C16</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động<br>
+                                    Khởi chiếu: 07/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014826_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Điệp viên siêu lầy (2D) - C16</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động<br>
+                                    Khởi chiếu: 01/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content">
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014877_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Ác nữ (2D) - C18</b></h6><br>
+                                <p>
+                                    Thể loại: Kinh dị<br>
+                                    Khởi chiếu: 11/09/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014389_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Siêu công phi đẳng MAVERICK(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động <br>
+                                    Khởi chiếu: 23/12/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014399_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Góa phụ đen(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động <br>
+                                    Khởi chiếu: 06/11/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014398_0.png">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Wonder woman 1984(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động <br>
+                                    Khởi chiếu: 02/11/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014397_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>The King's man: Khởi nguồn(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động <br>
+                                    Khởi chiếu: 18/10/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014853_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Song song(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Tâm lý, tình cảm <br>
+                                    Khởi chiếu: 25/11/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014765_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Soul(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Phiêu lưu <br>
+                                    Khởi chiếu: 04/12/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014805_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Gia đình chân to phiêu lưu kí(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hoạt hình <br>
+                                    Khởi chiếu: 25/12/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014377_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Không phải lúc chết(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động <br>
+                                    Khởi chiếu: 12/11/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014574_0.png">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Vô diện sát nhân(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Kinh dị <br>
+                                    Khởi chiếu: 09/11/2020
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014763_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>Minions: Sự trỗi dậy của Gru(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hoạt hình <br>
+                                    Khởi chiếu: 02/07/2021
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img src="https://chieuphimquocgia.com.vn/Content/Images/0014555_0.jpeg">
+                        <div class="overlay">
+                            <div class="text">
+                                <h6><b>FAST & FURIOUS 9(2D)</b></h6><br>
+                                <p>
+                                    Thể loại: Hành động <br>
+                                    Khởi chiếu: 02/04/2021
+                                </p><br>
+                                <a class="button">Đặt vé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/content/js/phim.js" type="text/javascript"></script>
+    <script>
+
+    </script>
+</body>
+</html>
